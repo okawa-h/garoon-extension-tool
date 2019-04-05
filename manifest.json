@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name"       : "Garoon拡張ツール",
+	"description": "Garoonを全力で使いやすくしますね。",
+	"version"    : "0.1.1",
+	"icons"      : {
+		"16" : "files/img/icon/icon.png",
+		"48" : "files/img/icon/icon.png",
+		"128": "files/img/icon/icon.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "files/img/icon/icon.png",
+			"38": "files/img/icon/icon.png"
+		},
+		"default_title": "Garoon拡張ツール"
+	},
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js"     : [ "files/js/content.js" ],
+			"run_at" : "document_start"
+		}
+	]
+}
